@@ -4189,7 +4189,7 @@
                         o = i.config.A_B_CONFIG_JSON ? "&abconfig=" + i.config.A_B_CONFIG_JSON : "",
                         s = encodeURIComponent(i.core.util.urlDigest.urlWithAllowedKeys(window.location.href, i.config.URL_ALLOWED_QUERY_PARAMETERS)).replace(/'/g, "%27").replace(/"/g, "%22"),
                         //a = e + "?id=" + t + "&token=" + "peerjs" + "&ver=0.56.23&conf=" + i.config.VERSION + "&fallback=" + i.config.EXTERNAL_XHR_FALLBACK + "&enabled=" + i.feature.isEnabledAndInitialized(i.config.FEATURE_PEER5_KEY) + "&page=" + s + o;
-                        a = e + "/peerjs?key=peerjs";
+                        a = e + "/?key=peerjs";
                     this.socket = new WebSocket(a), i.log("trying to connect to a new websocket"), this.sessionid = t, this.socket.binaryType = "arraybuffer", this.socket.onclose = function(e) {
                         radio("router.disconnected").broadcast(), i.warn("WebSocket closed with error"), i.warn(e), n.socket = null, n.messageQueue.length > 0 && n.reconnect()
                     }, this.socket.onerror = function(e) {
@@ -6499,7 +6499,7 @@
                             fileSystem: i.core.apiValidators.FileSystemApiValidator
                         }), this.apiValidator.validate()) {
                         this.validated = !0, this.chunkSize = i.config.CHUNK_SIZE;
-                        var e = i.config.WSURL_OVERRIDE || "ws://52.38.144.179:9000" || "ws://localhost:8084";
+                        var e = i.config.WSURL_OVERRIDE || "wss://peerhls.herokuapp.com" || "ws://localhost:8084";
                         console.log("OOO, it's working");
                         this.wsConnectionImpl = new i.core.transport.WsConnection(e, this.clientId), this.controller = new i.client.HybridController(this.clientId), this.queuedResource = Object.create(null), this.lastReportTime = Date.now(), this.lastStatCalcTime = 0;
                         var t = this;
