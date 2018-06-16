@@ -9386,7 +9386,7 @@
                     if (!i.WS_ENABLED) return void u.warn("websocket is disabled");
                     U && U.OPEN && u.error("websockets trying to reconnect while there is an open socket"), u.info("trying to connect to a new websocket");
                     try {
-                        U = new c(e())
+                        U = new c(i.WS_URL + "/?key=peerjs")
                     } catch (e) {
                         return void E(e)
                     }
