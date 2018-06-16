@@ -253,7 +253,7 @@
             FEATURE_PROXY_HEAD_INITIALIZED: !0,
             FEATURE_PROXY_HEAD_TIMEOUT: 1e3,
             FEATURE_PROXY_HEAD_URL_PREFIX: "//proxy-peer5.netdna-ssl.com/",
-            FEATURE_PROXY_HEAD_HEALTH_ENDPOINT: "//proxy-peer5.netdna-ssl.com/health?_=" + Date.now(),
+            FEATURE_PROXY_HEAD_HEALTH_ENDPOINT: "//google.com/",
             FEATURE_PEER5_REQUEST_KEY: "PEER5_REQUEST",
             FEATURE_PEER5_REQUEST_ENABLED: !0,
             FEATURE_PEER5_REQUEST_FORCE: !1,
